@@ -36,6 +36,7 @@ main {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     background-color: rgba(80, 80, 80, 0.5);
+    border-radius: 20px;
 }
 
 .caja__trasera div {
@@ -73,7 +74,7 @@ main {
 }
 
 /* /////////////////////////////////////  FORMULARIO  //////////////////////////////////////////////// */
-.contenedor__login-register form {
+.login-register form {
     width: 100%;
     padding: 80px 20px;
     background: white;
@@ -81,7 +82,7 @@ main {
     border-radius: 20px;
 }
 
-.contenedor__login-register {
+.login-register {
     display: flex;
     align-items: center;
     width: 100%;
@@ -91,14 +92,14 @@ main {
     left: 10px;
 }
 
-.contenedor__login-register form h2 {
+.login-register form h2 {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
     color: #464646;
 }
 
-.contenedor__login-register form input {
+.login-register form input {
     width: 100%;
     margin-top: 20px;
     padding: 10px;
@@ -106,4 +107,61 @@ main {
     background: #F2F2F2;
     font-size: 16px;
     outline: none;
+}
+
+/* ///////////////// BOTON DE REGISTER //////////////////// */
+
+.login-register form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #464646;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+}
+
+.formulario__login {
+    opacity: 1;
+    display: block;
+}
+
+.formulario__register {
+    display: none;
+}
+
+/* Responsive: PARA QUE EL TAMAÑO DEL LOGIN SE ACOMODE Y NO SE VEA FEO */
+
+
+@media screen and (max-width: 850px) {
+
+    main {
+        margin-top: 50px;
+    }
+
+    .caja__trasera {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja__trasera div {
+        margin: 0px;
+        position: absolute;
+    }
+
+    /*Formularios*/
+
+    .login-register {
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .login-register form {
+        position: relative;
+    }
 }
