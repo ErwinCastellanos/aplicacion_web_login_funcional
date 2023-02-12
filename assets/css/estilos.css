@@ -90,6 +90,8 @@ main {
     position: relative;
     top: -185px;
     left: 10px;
+    /* ///////////////// ES LA TRANSICION DE LA CAJA LOGIN Y REGISTER /////////////////////// */
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
 .login-register form h2 {
