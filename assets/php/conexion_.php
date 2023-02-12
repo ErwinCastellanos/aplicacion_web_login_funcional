@@ -6,11 +6,13 @@ $conexion = mysql_connect(
     "",
     "login_register_db",
 );
-    if($conexion){
-        echo 'Conectado exitosamente a la Base de datos';
-    } else{
-        echo 'ERROR';
-    }
+
+// PARA SABER SI FUNCIONA EL localhost
+    // if($conexion){
+    //     echo 'Conectado exitosamente a la Base de datos';
+    // } else{
+    //     echo 'ERROR';
+    // }
 
 
 ?>
