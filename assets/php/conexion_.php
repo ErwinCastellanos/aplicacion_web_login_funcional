@@ -1,10 +1,10 @@
 <?php
 
-$conexion = mysql_connect(
+$conexion = mysqli_connect(
     "localhost",
     "root", 
     "",
-    "login_register_db",
+    "login_register_db"
 );
 
 // PARA SABER SI FUNCIONA EL localhost
