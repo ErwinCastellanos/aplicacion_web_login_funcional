@@ -14,7 +14,7 @@ $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo
 if (mysqli_num_rows($verificar_correo) > 0) {
     echo '
     <script>´
-        alert("*ERROR El usuario ya existe");
+        alert("*ERROR El correo ya existe");
         window.location = "../index.php";
     </script>';
     exit();
