@@ -6,14 +6,18 @@ $correo = $_POST['correo'];
 $usuario = $_POST['usuario'];
 $contrasena = $_POST['contrasena'];
 
+//PARA ENCRIPTAR CONTRASEÑA
+
+$contrasena = hash('sha512', $contrasena);
+
 $query = "INSERT INTO usuarios(nombre_completo, correo, usuario, contrasena) VALUES('$nombre_completo', '$correo','$usuario','$contrasena')";
 
 //VERIFICAR QUE EL CORREO NO SE REPITA EN LA BASE DE DATOS
-
+        
 $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo = '$correo' ");
 if (mysqli_num_rows($verificar_correo) > 0) {
     echo '
-    <script>´
+    <script>
         alert("*ERROR El correo ya existe");
         window.location = "../index.php";
     </script>';
@@ -26,7 +30,7 @@ if (mysqli_num_rows($verificar_correo) > 0) {
 $verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$usuario' ");
 if (mysqli_num_rows($verificar_usuario) > 0) {
     echo '
-    <script>´
+    <script>
         alert("*ERROR El usuario ya existe");
         window.location = "../index.php";
     </script>';

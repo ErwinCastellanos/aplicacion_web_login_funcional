@@ -24,12 +24,14 @@
                 </div>
             </div> 
             <div class="login-register">
-                <form action="" class="formulario__login">
+                <!-- LOGIN -->
+                <form ction="php/registro_usuario.php"  class="formulario__login">
                     <h2>Iniciar Sesión</h2>
-                        <input type="text" placeholder="Correo Electronico">
-                        <input type="password" placeholder="Contraseña">
+                        <input type="text" placeholder="Correo Electronico" name="correo">
+                        <input type="password" placeholder="Contraseña" name="contrasena">
                         <button>Entrar</button>
                 </form>
+                <!-- REGISTRO -->
                 <form action="php/registro_usuario.php" method="POST" class="formulario__register">
                     <h2>Regístrarse</h2>
                         <input type="text" placeholder="Nombre" name="nombre_completo">
