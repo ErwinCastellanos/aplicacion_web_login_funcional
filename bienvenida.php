@@ -23,6 +23,6 @@ if(!isset($_SESSION["usuario"])){
 </head>
 <body>
     <h1>bienvenida</h1>
-    <a href="php/cerrar_session.php">Cerrar sessión</a>
+    <a href="cerrar_sesion.php">Cerrar sessión</a>
 </body>
 </html>
